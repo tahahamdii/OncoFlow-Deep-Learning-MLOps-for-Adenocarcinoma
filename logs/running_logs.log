@@ -68,3 +68,42 @@ Traceback (most recent call last):
   File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\utils\common.py", line 35, in read_yaml
     raise ValueError("yaml file is empty")
 ValueError: yaml file is empty
+[2024-07-30 15:26:26,052: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-30 15:26:26,053: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-30 15:26:26,054: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-30 15:26:26,055: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\utils\common.py", line 33, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\venv\Lib\site-packages\box\box.py", line 259, in __init__
+    raise BoxValueError("First argument must be mapping or iterable")
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\main.py", line 12, in <module>
+    obj.main()
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\config\configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2024-07-30 15:29:46,148: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-30 15:29:46,149: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-30 15:29:46,152: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-30 15:29:46,152: INFO: common: created directory at: artifacts]
+[2024-07-30 15:29:46,152: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-30 15:29:46,152: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-07-30 15:30:41,910: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-07-30 15:30:42,499: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
