@@ -10,3 +10,32 @@
 [2024-07-30 14:20:53,961: INFO: common: yaml file: params.yaml loaded successfully]
 [2024-07-30 14:22:18,299: INFO: common: yaml file: config\config.yaml loaded successfully]
 [2024-07-30 14:22:18,302: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-30 14:36:17,362: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-30 14:36:17,369: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-30 14:36:17,370: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-30 14:36:17,370: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\utils\common.py", line 33, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\venv\Lib\site-packages\box\box.py", line 259, in __init__
+    raise BoxValueError("First argument must be mapping or iterable")
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\main.py", line 12, in <module>
+    obj.main()
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\config\configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
