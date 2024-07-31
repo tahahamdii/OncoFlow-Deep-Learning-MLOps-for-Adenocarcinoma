@@ -122,3 +122,29 @@ x==========x]
 [2024-07-31 11:30:54,330: INFO: common: created directory at: artifacts/prepare_base_model]
 [2024-07-31 11:42:49,571: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
 [2024-07-31 11:42:50,177: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-31 12:06:54,140: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-31 12:06:54,142: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 12:06:54,144: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 12:06:54,145: INFO: common: created directory at: artifacts]
+[2024-07-31 12:06:54,145: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-31 12:06:54,146: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-07-31 12:07:57,013: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-07-31 12:07:57,619: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-31 12:07:57,620: INFO: main: *******************]
+[2024-07-31 12:07:57,620: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-31 12:07:57,621: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 12:07:57,623: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 12:07:57,623: INFO: common: created directory at: artifacts]
+[2024-07-31 12:07:57,624: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-31 12:07:58,196: ERROR: main: 'PrepareBaseModel' object has no attribute 'save_model']
+Traceback (most recent call last):
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\main.py", line 23, in <module>
+    prepare_base_model.main()
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 18, in main
+    prepare_base_model.get_base_model()
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\components\prepare_base_model.py", line 20, in get_base_model
+    self.save_model(path=self.config.base_model_path, model=self.model)
+    ^^^^^^^^^^^^^^^
+AttributeError: 'PrepareBaseModel' object has no attribute 'save_model'
