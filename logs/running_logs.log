@@ -107,3 +107,12 @@ ValueError: yaml file is empty
 [2024-07-30 15:30:42,499: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2024-07-31 10:49:39,054: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 10:49:39,081: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 10:49:39,085: INFO: common: created directory at: artifacts]
+[2024-07-31 10:50:24,330: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 10:50:24,334: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 10:50:24,336: INFO: common: created directory at: artifacts]
+[2024-07-31 11:00:28,173: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 11:00:28,176: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 11:00:28,177: INFO: common: created directory at: artifacts]
