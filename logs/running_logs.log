@@ -194,3 +194,29 @@ AttributeError: 'PrepareBaseModel' object has no attribute 'save_model'
 [2024-07-31 14:29:10,324: INFO: common: created directory at: artifacts\training]
 [2024-07-31 14:29:10,811: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
 [2024-07-31 14:29:53,825: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-08-02 02:45:35,394: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-02 02:45:35,396: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-02 02:45:35,397: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-02 02:45:35,398: INFO: common: created directory at: artifacts]
+[2024-08-02 02:45:35,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-02 02:45:35,399: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-02 02:46:43,800: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-02 02:46:44,489: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-08-02 02:46:44,490: INFO: main: *******************]
+[2024-08-02 02:46:44,490: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-08-02 02:46:44,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-02 02:46:44,493: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-02 02:46:44,493: INFO: common: created directory at: artifacts]
+[2024-08-02 02:46:44,493: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-02 02:46:45,159: ERROR: main: 'PrepareBaseModel' object has no attribute 'save_model']
+Traceback (most recent call last):
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\main.py", line 25, in <module>
+    prepare_base_model.main()
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 18, in main
+    prepare_base_model.get_base_model()
+  File "C:\projects\OncoFlow-Deep-Learning-MLOps-for-Adenocarcinoma\src\cnnClassifier\components\prepare_base_model.py", line 20, in get_base_model
+    self.save_model(path=self.config.base_model_path, model=self.model)
+    ^^^^^^^^^^^^^^^
+AttributeError: 'PrepareBaseModel' object has no attribute 'save_model'
